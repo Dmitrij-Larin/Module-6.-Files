@@ -27,6 +27,17 @@ dir_9 = 'data_path_2'
 file = 'test_file_3.txt'
 path_test_file_3 = os.path.join(disk, dir_1, dir_2, dir_3, dir_4, dir_5, dir_6, dir_7, dir_8, dir_9, file)
 print(path_test_file_3)
+print()
+
+# Создадим папки внутри папки data_path_2
+base_dir = '.'
+test_dir = 'data_path_2'
+new_dir_1 = r'my_new_dir_1'
+new_dir_2 = r'my_new_dir_2'
+path_new_dir_1 = os.path.join(base_dir, test_dir, new_dir_1)
+path_new_dir_2 = os.path.join(base_dir, test_dir, new_dir_2)
+os.mkdir(path_new_dir_1)
+os.mkdir(path_new_dir_2)
 
 
 
