@@ -1,17 +1,18 @@
 import os
+import shutil
 
 # Укажем в консоли абсолютный путь к файлу test_file_1.txt
-# my_abspath = os.path.abspath(r'.\data_path_1\test_file_1.txt')
-# print(my_abspath)
-# print()
+my_abspath = os.path.abspath(r'.\data_path_1\test_file_1.txt')
+print(my_abspath)
+print()
 
 # Выведем содержимое папки task_6_2_1
-# path_learning = r"C:\Users\dmitr\OneDrive\Documentos\Обучение на Python\Module 6. Homework\Module 6_1\task_6_2_1"
-# for path, dirnames, filenames in os.walk(path_learning):
-#     print(f"path - {path}")
-#     print(f"dirnames - {dirnames}")
-#     print(f"filenames - {filenames}")
-# print()
+path_learning = r"C:\Users\dmitr\OneDrive\Documentos\Обучение на Python\Module 6. Homework\Module 6_1\task_6_2_1"
+for path, dirnames, filenames in os.walk(path_learning):
+    print(f"path - {path}")
+    print(f"dirnames - {dirnames}")
+    print(f"filenames - {filenames}")
+print()
 
 # Укажем абсолютный путь к файлу test_file_3.txt с помощью функции os.path.join()
 disk = 'C:\\'
@@ -36,8 +37,8 @@ new_dir_1 = r'my_new_dir_1'
 new_dir_2 = r'my_new_dir_2'
 path_new_dir_1 = os.path.join(base_dir, test_dir, new_dir_1)
 path_new_dir_2 = os.path.join(base_dir, test_dir, new_dir_2)
-os.mkdir(path_new_dir_1)
-os.mkdir(path_new_dir_2)
+# os.mkdir(path_new_dir_1)
+# os.mkdir(path_new_dir_2)
 
-
-
+# Удаляем папку path_new_dir_2 внутри папки data_path_2
+# shutil.rmtree(path_new_dir_2, ignore_errors=False)
